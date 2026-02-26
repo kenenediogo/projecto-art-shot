@@ -1,0 +1,124 @@
+/* ---- LAYOUT GERAL DA SECÇÃO "SERVICES" ---- */
+
+/* Estilização aplicada à secção "services" para telas com largura máxima de 768px */
+/* A organização muda para layout em bloco, adequado para telas menores */
+#services .items {
+    display: block; /* Altera o layout para blocos empilhados, facilitando a leitura em dispositivos móveis */
+    padding: 1rem; /* Adiciona espaçamento interno uniforme ao redor dos itens */
+}
+
+/* ---- ALINHAMENTO DOS ÍCONES À ESQUERDA ---- */
+
+/* Estilização para os itens dentro de "services" */
+/* Garante que o ícone e o texto sejam exibidos horizontalmente alinhados */
+#services .items .item {
+    display: flex; /* Define layout flex para alinhar o ícone e o texto na mesma linha */
+    text-align: left; /* Alinha o texto e outros conteúdos à esquerda */
+}
+
+/* ---- POSICIONAMENTO DOS ÍCONES ---- */
+
+/* Estilização para os ícones dentro dos itens */
+/* Adaptação para melhor apresentação em telas menores */
+#services .items .item i {
+    margin-right: 1.3rem; /* Adiciona espaçamento entre o ícone e o texto para evitar sobreposição */
+    align-self: center; /* Centraliza verticalmente o ícone em relação ao texto */
+    margin-bottom: 0; /* Remove qualquer margem inferior padrão para manter o alinhamento uniforme */
+}
+
+
+/* ---- ESTILO GERAL ---- */
+
+/* Reduz o tamanho da fonte para títulos grandes em dispositivos menores */
+.large-heading {
+    font-size: 3rem; /* Ajuste proporcional ao espaço disponível em telas pequenas */
+}
+
+/* ---- RESPONSIVIDADE PARA SMARTPHONES ---- */
+/* Aplicada para dispositivos com largura máxima de 500px */
+@media (max-width: 500px) {
+
+    /* ---- NAVBAR ---- */
+
+    /* Reorganiza os elementos do navbar para um layout em coluna */
+    /* #navbar {
+        flex-direction: column; ---> Empilha os itens verticalmente
+        align-items: center;    ---> Centraliza os itens no eixo principal 
+    } */
+
+    /* Centraliza o logotipo e adiciona margem inferior */
+    #navbar .logo {
+        margin-bottom: 0.5rem; /* Adiciona espaço abaixo do logotipo */
+        text-align: center;    /* Centraliza o texto do logotipo */
+    }
+
+    /* Adiciona padding ao contêiner de navegação */
+    #navbar ul:not(.menu-wrap ul) {
+        /* padding: 0.5rem;  Garante espaçamento adequado ao redor dos itens */
+        display: none;
+    }
+
+    .menu-wrap {
+        display: unset;
+    }
+
+    /* ---- SHOWCASE ---- */
+
+    /* Ajusta o conteúdo principal no showcase para compensar o layout responsivo */
+    #showcase .showcase-content {
+        top: 73px; /* Move o conteúdo para baixo para evitar sobreposição */
+    }
+
+    /* ---- ABOUT ---- */
+
+    /* Altera o layout da seção "About" para empilhamento vertical */
+    #about {
+        display: block; /* Reorganiza o layout em coluna */
+    }
+
+    /* Oculta a imagem na seção "About" para economizar espaço em telas menores */
+    #about .about-img {
+        display: none; /* Remove a imagem da exibição */
+    }
+
+    /* ---- CLIENTS ---- */
+
+    /* Reduz a largura das imagens de clientes para caber melhor na tela */
+    #clients .items img {
+        width: 80%; /* Ajusta a largura relativa ao contêiner */
+    }
+
+    /* Oculta o último item na seção de clientes */
+    #clients .items div:last-child {
+        display: none; /* Remove o último elemento para melhorar o layout */
+    }
+
+    /* ---- CONTACT ---- */
+
+    /* Altera o layout para empilhamento vertical */
+    #contact {
+        flex-direction: column; /* Reorganiza os itens verticalmente */
+    }
+
+    /* Ajusta o mapa para telas menores */
+    #contact .map {
+        height: 200px;            /* Define uma altura fixa para o mapa */
+        border-top: 4px solid #333; /* Adiciona uma borda superior para separação visual */
+    }
+}
+
+/* ---- RESPONSIVIDADE PARA ALTURA MÁXIMA DE 568px ---- */
+/* Aplicada para telas com altura reduzida, como smartphones compactos */
+@media (max-height: 568px) {
+
+    /* Ajusta o conteúdo principal no showcase para telas mais baixas */
+    #showcase .showcase-content {
+        margin-top: -4.7rem; /* Move o conteúdo para cima para compensar a altura reduzida */
+        top: 140px; /* Redefine a posição do topo */
+    }
+
+    /* Reduz o tamanho da fonte de textos destacados */
+    .lead {
+        font-size: 1rem; /* Ajusta para melhor leitura em telas pequenas */
+    }
+}

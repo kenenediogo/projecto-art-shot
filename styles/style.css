@@ -1,0 +1,331 @@
+/* Estilização global */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Define estilos universais aplicados a todos os elementos da página */
+* {
+    padding: 0; /* Remove o espaçamento interno padrão de todos os elementos */
+    margin: 0; /* Remove o espaçamento externo padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho total dos elementos, evitando problemas de layout */
+}
+
+/* ---- CONFIGURAÇÃO GERAL DO DOCUMENTO ---- */
+
+/* Estilização global para o elemento <html> */
+html {
+    scroll-behavior: smooth; /* Adiciona um efeito de rolagem suave ao navegar para âncoras ou ao usar links internos */
+}
+
+
+/* Estilização do corpo da página */
+body {
+    font-family: "Roboto", sans-serif; /* Define a fonte principal como "Roboto" e a fonte de fallback como sans-serif */
+    line-height: 1.4; /* Define o espaçamento vertical padrão entre as linhas de texto para facilitar a leitura */
+}
+
+/* Estilização para todos os links */
+a {
+    text-decoration: none; /* Remove o sublinhado padrão de todos os links para um visual mais limpo */
+}
+
+/* ---- CONFIGURAÇÃO DE PARÁGRAFOS ---- */
+
+/* Estilização global para os elementos <p> (parágrafos) */
+p {
+    margin: 0.75rem 0; /* Define margens verticais (superior e inferior) de 0.75rem e margens horizontais (esquerda e direita) de 0 */
+}
+
+/*----- CLASSES UTILITÁRIAS -----*/
+
+/* Configuração do contêiner principal */
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner como 1200px */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    padding: 0 2rem; /* Adiciona espaçamento horizontal interno de 2rem */
+    overflow: hidden; /* Evita que elementos internos ultrapassem os limites do contêiner */
+}
+
+/* Centralização de texto */
+.text-center {
+    text-align: center; /* Centraliza horizontalmente o texto dentro do elemento */
+}
+
+/* Cor primária */
+.text-primary { 
+    color: #ff1e00; /* Define o texto com a cor vermelha característica da marca */
+}
+
+/* Títulos grandes */
+.large-heading { 
+    font-size: 4rem; /* Define o tamanho da fonte como 4rem para títulos grandes */
+    margin-bottom: 0.75rem; /* Adiciona espaçamento inferior para separação */
+    line-height: 1.1; /* Define o espaçamento entre as linhas do texto */
+}
+
+/* Títulos médios */
+.m-heading {
+    font-size: 2rem; /* Define o tamanho da fonte como 2rem para títulos médios */
+    margin-bottom: 0.75rem; /* Adiciona espaçamento inferior */
+    line-height: 1.1; /* Espaçamento entre linhas */
+}
+
+/* Botão genérico */
+.btn {
+    display: inline-block; /* Permite aplicar margens e padding, mantendo o botão inline */
+    color: #fff; /* Define a cor do texto como branco */
+    background-color: #ff1e00; /* Define a cor de fundo como a cor primária */
+    padding: 0.5rem 2rem; /* Define espaçamento interno (vertical e horizontal) */
+    border-radius: 50px; /* Adiciona bordas arredondadas para um visual mais amigável */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    transition: all 0.2s; /* Aplica uma transição suave em todas as propriedades durante 0.2s */
+}
+
+/* Estilo do botão no estado de hover */
+.btn:hover {
+    background-color: #ca1800; /* Muda a cor de fundo para um vermelho mais escuro ao passar o mouse */
+}
+
+/* Botão com tema escuro */
+.btn-dark {
+    background-color: #333; /* Fundo cinza escuro */
+    color: #fff; /* Texto branco */
+}
+
+/* Fundo claro */
+.bg-light {
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    color: #333; /* Texto cinza escuro */
+}
+
+/* Fundo escuro */
+.bg-dark {
+    background-color: #333; /* Fundo cinza escuro */
+    color: #fff; /* Texto branco */
+}
+
+/* Fundo com a cor primária */
+.bg-primary {
+    background-color: #ff1e00; /* Fundo vermelho característico */
+    color: #fff; /* Texto branco */
+}
+
+/* Texto destacado */
+.lead {
+    font-size: 1.2rem; /* Tamanho de fonte ligeiramente maior que o normal */
+    margin-bottom: 2rem; /* Espaçamento inferior para separação */
+}
+
+/* Classe para definir o espaçamento (padding) nas direções vertical (topo e base) */
+.py-1{
+    padding: 1.5rem 0; /* Define 1.5rem de padding no topo e na base, 0 nos lados */
+}
+
+.py-2{
+    padding: 2rem 0; /* Define 2rem de padding no topo e na base, 0 nos lados */
+}
+
+.py-3{
+    padding: 3rem 0; /* Define 3rem de padding no topo e na base, 0 nos lados */
+}
+
+/* Classe para definir o espaçamento (padding) nas 4 direções (topo, direita, base e esquerda) */
+.p-1{
+    padding: 1.5rem; /* Define 1.5rem de padding em todas as direções (topo, direita, base e esquerda) */
+}
+
+.p-2{
+    padding: 2rem; /* Define 2rem de padding em todas as direções (topo, direita, base e esquerda) */
+}
+
+.p-3{
+    padding: 3rem; /* Define 3rem de padding em todas as direções (topo, direita, base e esquerda) */
+}
+
+/* Listas não ordenadas gerais */
+.list {
+    margin: 0.5rem 0; /* Adiciona espaçamento vertical de 0.5rem acima e abaixo da lista */
+    list-style: none; /* Remove os marcadores padrão da lista */
+}
+
+.list li {
+    padding: 0.5rem 0; /* Adiciona espaçamento interno vertical de 0.5rem em cada item da lista */
+    border-bottom: #444 dotted 1px; /* Adiciona uma linha inferior pontilhada com cor cinza escuro */
+}
+
+/*---- FIM CLASSE UTILITÁRIA ----*/
+
+/*---- NAVBAR ----*/
+
+/* Configuração geral da barra de navegação */
+#navbar { 
+    display: flex; /* Utiliza o layout flexbox para organizar os itens horizontalmente */
+    background-color: #333; /* Define o fundo da navbar com um cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    justify-content: space-between; /* Espaça os itens entre si (esquerda e direita) */
+    padding: 1rem; /* Adiciona espaçamento interno de 1rem em todos os lados */
+    position: sticky; /* Fixa a barra no topo ao rolar a página */
+    top: 0; /* Define que a navbar estará presa ao topo da página */
+    z-index: 1; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Lista de navegação dentro da navbar */
+#navbar ul { 
+    display: flex; /* Organiza os itens da lista horizontalmente */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Links dentro dos itens da lista */
+#navbar ul li a { 
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 0.75rem; /* Adiciona espaçamento interno (vertical e horizontal) ao link */
+    margin: 0 0.25rem; /* Adiciona espaçamento horizontal entre os links */
+}
+
+/* Estilo para links ao passar o mouse */
+#navbar ul li a:hover {
+    background-color: #ff1e00; /* Muda a cor de fundo para vermelho ao passar o mouse */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao fundo do link */
+}
+
+/* Esconder o menu hambuerger na versão normal */
+.menu-wrap {
+    display: none;
+}
+
+/*---- SHOWCASE ----*/
+
+/* Configuração geral da seção de destaque */
+#showcase {
+    background: #333 url('../images/showcase.jpg') no-repeat center center/cover; /* Define um fundo com uma imagem centralizada e coberta */
+    height: 100vh; /* Define a altura da seção para ocupar 100% da altura da janela */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Conteúdo interno da seção de destaque */
+#showcase .showcase-content {
+    display: flex; /* Utiliza flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza os itens em uma coluna vertical */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 100%; /* Faz o conteúdo ocupar 100% da altura do showcase */
+
+    /* Configuração de sobreposição */
+    position: absolute; /* Posiciona o conteúdo em relação ao showcase */
+    top: 65px; /* Espaçamento superior de 65px para evitar sobreposição com a navbar */
+    left: 0; /* Alinha o conteúdo à esquerda */
+    right: 0; /* Alinha o conteúdo à direita */
+    bottom: 0; /* Alinha o conteúdo à parte inferior */
+    background-color: rgba(0, 0, 0, 0.4); /* Adiciona um fundo semitransparente preto para destacar o texto */
+}
+
+
+/* SECÇÃO: O QUE NÓS FAZEMOS */
+
+/* Contêiner principal dos itens dentro da seção "services" */
+#services .items {
+    display: flex; /* Define um layout flexível para organizar os itens internos */
+    padding: 1rem; /* Adiciona espaçamento interno ao redor de todo o contêiner */
+}
+
+/* Estilização para cada item individual dentro do contêiner */
+#services .items .item {
+    text-align: center; /* Centraliza horizontalmente o conteúdo dentro de cada item */
+    padding: 1rem; /* Adiciona espaçamento interno em torno de cada item */
+}
+
+/* Estilização para o ícone dentro de cada item */
+#services .items .item i {
+    background-color: #ff1e00; /* Define a cor de fundo do ícone */
+    padding: 1rem; /* Adiciona espaçamento interno ao redor do conteúdo do ícone */
+    border-radius: 50%; /* Transforma o fundo do ícone em um círculo */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo do ícone, separando-o do texto ou conteúdo seguinte */
+}
+
+/* SECÇÃO: QUEM SOMOS NÓS */
+
+/* Estilização para o contêiner principal da seção com o ID "about" */
+#about {
+    display: flex; /* Define um layout flexível para organizar os elementos filhos horizontalmente (lado a lado por padrão) */
+}
+
+/* Estilização genérica para todos os elementos <div> dentro da seção #about */
+#about div {
+    flex: 1; /* Garante que cada <div> ocupe um espaço igual dentro do contêiner flexível */
+}
+
+/* Estilização específica para a classe "about-img" dentro da seção #about */
+#about .about-img {
+    background: #333 url(../images/team.jpg) no-repeat center center/cover;
+    /* 
+        - #333: Define uma cor de fundo cinza escura para garantir contraste caso a imagem não carregue.
+        - url(../images/team.jpg): Define o caminho para a imagem de fundo.
+        - no-repeat: Evita que a imagem seja repetida.
+        - center center: Centraliza a imagem tanto horizontal quanto verticalmente.
+        - cover: Faz com que a imagem ocupe todo o espaço disponível sem distorcer, cortando se necessário.
+    */
+}
+
+/* SECÇÃO: CLIENTES */
+
+/* Estilização para o contêiner que agrupa os itens da seção "clients" */
+#clients .items {
+    display: flex; /* Define um layout flexível para organizar os itens filhos horizontalmente (lado a lado por padrão) */
+}
+
+/* Estilização para as imagens dentro do contêiner ".items" da seção "clients" */
+#clients .items img {
+    display: block; /* Garante que a imagem seja renderizada como um bloco, evitando o comportamento inline padrão */
+    margin: auto; /* Centraliza a imagem dentro de seu elemento pai, tanto horizontal quanto verticalmente */
+    width: 60%; /* Define que a largura da imagem será 60% do tamanho do contêiner pai, mantendo a proporção */
+}
+
+/* ---- SECÇÃO: CONTACTO E LOCALIZAÇÃO ---- */
+
+/* Configuração geral para a secção de contacto */
+#contact {
+    display: flex; /* Utiliza o layout flexbox para organizar os elementos horizontalmente */
+}
+
+/* Define o estilo para o mapa e o formulário de contacto dentro da secção */
+#contact .map, 
+#contact .contact-form {
+    flex: 1; /* Cada elemento ocupa a mesma proporção do espaço disponível */
+    /* flex-basis: 50%; /* Garante que ambos ocupem inicialmente 50% da largura */
+}
+
+/* Configuração para grupos de formulário (ex.: campos de texto e rótulos) */
+#contact .contact-form .form-group {
+    margin: 0.75rem; /* Adiciona espaçamento ao redor de cada grupo de campos */
+}
+
+/* Estilização para os campos de entrada e área de texto dentro do formulário */
+#contact .contact-form input, 
+#contact .contact-form textarea {
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+    padding: 0.5rem; /* Adiciona espaçamento interno de 0.5rem em todos os lados */
+}
+
+/* ---- MAP ---- */
+
+/* Configuração geral para a área do mapa */
+.map {
+    position: relative; /* Define o mapa como relativo para facilitar posicionamentos internos */
+    text-align: right; /* Alinha o conteúdo do mapa à direita */
+    width: 100%; /* Faz o mapa ocupar toda a largura do container pai */
+}
+
+/* Configuração para o contêiner do mapa Google */
+.gmap_canvas {
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do container */
+    background: none!important; /* Remove qualquer fundo padrão do contêiner */
+    width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+    height: 100%; /* Faz o contêiner ocupar toda a altura disponível */
+}
+
+/* Estilização para o iframe do mapa (onde o mapa é embutido) */
+.gmap_iframe {
+    width: 100%; /* Faz o iframe ocupar toda a largura do container pai */
+    height: 100%; /* Faz o iframe ocupar toda a altura do container pai */
+}

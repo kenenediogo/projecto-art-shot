@@ -1,0 +1,26 @@
+/* ---- ALINHAMENTO DOS ÍCONES À ESQUERDA ---- */
+
+/* Estilização para os itens dentro da secção "services" */
+/* Essas regras são aplicadas apenas em telas com largura mínima de 1100px */
+#services .items .item {
+    display: flex; /* Define o layout flexbox para alinhar os ícones e o texto horizontalmente */
+    text-align: left; /* Garante que o texto dentro do item fique alinhado à esquerda */
+}
+
+/* ---- POSICIONAMENTO DO ÍCONE ---- */
+
+/* Estilização para os ícones dentro dos itens de "services" */
+/* Aplicável apenas em telas com largura mínima de 1100px */
+#services .items .item i {
+    margin-right: 1.3rem; /* Adiciona espaço à direita do ícone, separando-o do texto */
+    align-self: center; /* Alinha o ícone verticalmente no centro da linha flex */
+    margin-bottom: 0; /* Remove qualquer margem inferior padrão para melhor alinhamento */
+}
+
+/* ---- ALTERAR TAMANHO DO MAPA ---- */
+
+/* Estilização para o mapa na secção "contact" */
+/* Estas regras ajustam o tamanho do mapa para telas com largura mínima de 1100px */
+#contact .map {
+    flex: 2; /* Faz o mapa ocupar o dobro do espaço em relação ao formulário, garantindo um layout equilibrado */
+}
